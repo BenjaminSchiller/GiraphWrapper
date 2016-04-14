@@ -2,7 +2,8 @@ build/*.jar
 
 doc/
 
-execution/results
+execution/jobs.*
 execution/plots
+execution/results
 
 java/lib

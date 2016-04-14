@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="all" name="all">
+    <target name="all" depends="giraph"/>
+
+    <target name="giraph">
+        <jar destfile="giraph.jar" filesetmanifest="mergewithoutmain">
+            <fileset dir="../java/bin"/>
+            <zipgroupfileset dir="../java/lib/" includes="ArgList.jar" />
+            <zipgroupfileset dir="../java/lib/" includes="giraph-examples-1.2.0-SNAPSHOT-for-hadoop-1.2.1-jar-with-dependencies.jar" />
+            <zipgroupfileset dir="../java/lib/" includes="okapi-0.3.5-SNAPSHOT-jar-with-dependencies.jar" />
+            <!-- <zipgroupfileset dir="../java/lib/" includes="commons-configuration-1.10.jar" />
+            <zipgroupfileset dir="../java/lib/" includes="commons-lang-2.6.jar" />
+            <zipgroupfileset dir="../java/lib/" includes="commons-logging-1.2.jar" />
+            <zipgroupfileset dir="../java/lib/" includes="hadoop-core-1.2.1.jar" /> -->
+        </jar>
+    </target>
+</project>
